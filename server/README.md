@@ -9,8 +9,6 @@ This documentation provides an overview of the backend codebase for the project.
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Database Schema](#database-schema)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Structure
 

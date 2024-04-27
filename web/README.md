@@ -8,8 +8,6 @@ This documentation provides an overview of the frontend codebase for the project
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Structure
 
