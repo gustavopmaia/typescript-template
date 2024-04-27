@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import api from '../services/api'
-import { InputField } from '../components/InputField'
-import { Menu } from '../components/Menu'
+import api from '../../services/api'
+import { InputField } from '../../components/InputField'
+import { Menu } from '../../components/Menu'
+import cookie from 'cookiejs'
 
-export const Register = () => {
+export const Login = () => {
   interface user {
-    name: string
     email: string
     password: string
   }
@@ -17,24 +17,23 @@ export const Register = () => {
     console.log(e.target.email.value)
 
     setUser({
-      name: e.target.nome.value,
       email: e.target.email.value,
       password: e.target.password.value,
     })
 
-    createUser(user)
+    login(user)
   }
 
-  const createUser = async (userInfo: user) => {
+  const login = async (userInfo: user) => {
     await api
-      .post('/users', {
-        name: userInfo.name,
+      .post('/login', {
         email: userInfo.email,
         password: userInfo.password,
       })
       .then((response: { data: any }) => {
         setUser(response.data)
-        alert(`Usuario ${userInfo.name} criado!`)
+        // console.log(response.data.token)
+        localStorage.setItem('token', response.data.token)
         location.reload()
       })
       .catch((err: any) => {
@@ -46,7 +45,6 @@ export const Register = () => {
     <div className='App'>
       <Menu />
       <form className='flex flex-col items-center justify-center' onSubmit={handleSubmit}>
-        <InputField label='Nome' type='text' id='nome' name='nome' />
         <InputField label='E-mail' type='email' id='email' name='email' />
         <InputField label='Senha' type='password' id='senha' name='password' />
 
@@ -56,8 +54,6 @@ export const Register = () => {
         >
           ENVIAR
         </button>
-
-        <h1>{user?.name}</h1>
       </form>
     </div>
   )
