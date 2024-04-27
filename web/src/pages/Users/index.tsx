@@ -3,7 +3,7 @@ import api from '../../services/api'
 import cookie from 'cookiejs'
 import { useEffect, useState } from 'react'
 import { Menu } from '../../components/Menu'
-import { Container, UserBox, UserList } from './style'
+import { Container, ContainerList, ListTitle, UserBox, UserList, UserTitle } from './style'
 
 interface User {
   id: number
@@ -43,16 +43,18 @@ const Users = () => {
     <>
       <Menu />
       <Container>
-        <h1>All Users</h1>
-        {error && <p>{error}</p>}
-        <UserList>
-          {users.map((user) => (
-            <UserBox key={user.id}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold' }}>Name: {user.name}</p>
-              <p>Email: {user.email}</p>
-            </UserBox>
-          ))}
-        </UserList>
+        <ContainerList>
+          <ListTitle>All Users</ListTitle>
+          {error && <p>{error}</p>}
+          <UserList>
+            {users.map((user) => (
+              <UserBox key={user.id}>
+                <UserTitle>Name: {user.name}</UserTitle>
+                <p>Email: {user.email}</p>
+              </UserBox>
+            ))}
+          </UserList>
+        </ContainerList>
       </Container>
     </>
   )

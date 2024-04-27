@@ -4,13 +4,18 @@ import { Logo, Navbar, List, ListItem } from './styles'
 export const Menu = () => {
   return (
     <Navbar>
-      <Logo>LOGO</Logo>
+      <Logo>
+        <Link to='/'>LOGO</Link>
+      </Logo>
       <List>
         <ListItem>
-          <Link to='/'>Register</Link>
+          <Link to='/register'>Register</Link>
         </ListItem>
         <ListItem>
           <Link to='/login'>Login</Link>
+        </ListItem>
+        <ListItem>
+          <Link to='/users'>Users</Link>
         </ListItem>
       </List>
     </Navbar>
