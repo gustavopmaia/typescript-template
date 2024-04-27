@@ -27,10 +27,10 @@ npm run dev
 
 ## Aplicacao
 
-![Home Page](https://i.ibb.co/QXn3ffq/Pagina-Home.png)
-![Login Page](https://i.ibb.co/68Ncj6X/Pagina-Login.png)
-![Register Page](https://i.ibb.co/vD0tdwF/Pagina-Registro.png)
-![Users Page](https://i.ibb.co/k6ZqM94/Pagina-Users.png)
+![Home Page](./img/Pagina%20Home.png)
+![Login Page](./img/Pagina%20Login.png)
+![Register Page](./img/Pagina%20Registro.png)
+![Users Page](./img/Pagina%20Users.png)
 
 ## Contribuição
 
