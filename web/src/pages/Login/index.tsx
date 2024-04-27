@@ -3,6 +3,7 @@ import api from '../../services/api'
 import { InputField } from '../../components/InputField'
 import { Menu } from '../../components/Menu'
 import cookie from 'cookiejs'
+import { Footer } from '../../components/Footer'
 
 export const Login = () => {
   interface user {
@@ -55,6 +56,7 @@ export const Login = () => {
           ENVIAR
         </button>
       </form>
+      <Footer />
     </div>
   )
 }

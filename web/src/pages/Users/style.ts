@@ -19,6 +19,7 @@ export const UserBox = styled.div`
   border-radius: 5px;
   padding: 10px;
   width: 200px;
+  height: 130px;
   color: black;
 `
 

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import api from '../../services/api'
 import { InputField } from '../../components/InputField'
 import { Menu } from '../../components/Menu'
+import { Footer } from '../../components/Footer'
 
 export const Register = () => {
   interface user {
@@ -59,6 +60,7 @@ export const Register = () => {
 
         <h1>{user?.name}</h1>
       </form>
+      <Footer />
     </div>
   )
 }

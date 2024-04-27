@@ -4,6 +4,7 @@ import cookie from 'cookiejs'
 import { useEffect, useState } from 'react'
 import { Menu } from '../../components/Menu'
 import { Container, ContainerList, ListTitle, UserBox, UserList, UserTitle } from './style'
+import { Footer } from '../../components/Footer'
 
 interface User {
   id: number
@@ -56,6 +57,7 @@ const Users = () => {
           </UserList>
         </ContainerList>
       </Container>
+      <Footer />
     </>
   )
 }
