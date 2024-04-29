@@ -4,6 +4,6 @@ export const Box = styled.div`
   background-color: white;
   color: black;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
 `

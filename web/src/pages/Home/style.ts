@@ -13,7 +13,7 @@ export const ImgContainer = styled.div`
 export const ImgTitleContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   text-align: center;
   width: 30%;
   color: black;
@@ -30,6 +30,6 @@ export const Box = styled.div`
   background-color: white;
   color: black;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 2px;
   text-align: center;
 `
