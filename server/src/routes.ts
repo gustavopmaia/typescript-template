@@ -6,6 +6,7 @@ import {
   createUser,
   deleteUser,
   getUser,
+  getUserFromToken,
   getUsers,
   loginUser,
   updateUser,
@@ -19,6 +20,7 @@ export async function appRoutes(app: FastifyInstance) {
   app.get('/users/:id', { preHandler: [authMiddleware] }, async (req) => getUser(req))
   app.get('/users', { preHandler: [authMiddleware] }, async () => getUsers())
   app.put('/users', { preHandler: [authMiddleware, userMiddleware] }, async (req) => updateUser(req))
-  app.delete('/users/:id', { preHandler: [authMiddleware, userMiddleware] }, async (req) => deleteUser(req))
+  app.post('/delete-user', { preHandler: [authMiddleware, userMiddleware] }, async (req) => deleteUser(req))
   app.post('/login', async (req, res) => loginUser(req, res))
+  app.post('/user', async (req) => getUserFromToken(req))
 }

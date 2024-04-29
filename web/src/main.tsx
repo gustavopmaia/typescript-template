@@ -6,6 +6,8 @@ import { Register } from './pages/Register'
 import { Login } from './pages/Login'
 import Users from './pages/Users'
 import { Home } from './pages/Home'
+import { Update } from './pages/UpdateUser'
+import { Delete } from './pages/DeleteUser'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
   {
     path: '/users',
     element: <Users />,
+  },
+  {
+    path: '/update',
+    element: <Update />,
+  },
+  {
+    path: '/delete',
+    element: <Delete />,
   },
 ])
 

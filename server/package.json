@@ -4,10 +4,9 @@
   "description": "Boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "test": ""
+    "dev": "tsx watch src/server.ts"
   },
-  "author": "",
+  "author": "Gustavo Maia",
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^9.0.1",

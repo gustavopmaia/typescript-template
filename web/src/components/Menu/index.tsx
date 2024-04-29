@@ -17,6 +17,12 @@ export const Menu = () => {
         <ListItem>
           <Link to='/users'>Users</Link>
         </ListItem>
+        <ListItem>
+          <Link to='/update'>Update User</Link>
+        </ListItem>
+        <ListItem>
+          <Link to='/delete'>Delete User</Link>
+        </ListItem>
       </List>
     </Navbar>
   )

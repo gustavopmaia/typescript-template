@@ -3,9 +3,11 @@ type InputFieldProps = {
   type: string
   id: string
   name: string
+  value?: string
+  onChange?: any
 }
 
-export function InputField({ label, type, id, name }: InputFieldProps) {
+export function InputField({ label, type, id, name, value, onChange }: InputFieldProps) {
   return (
     <>
       <input
@@ -14,6 +16,8 @@ export function InputField({ label, type, id, name }: InputFieldProps) {
         placeholder={label}
         id={id}
         name={name}
+        value={value ? value : value}
+        onChange={onChange ? onChange : onChange}
       />
     </>
   )

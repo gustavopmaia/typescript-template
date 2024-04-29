@@ -1,6 +1,8 @@
 import argon2 from 'argon2'
 import { prisma } from '../../lib/prisma'
 import { Prisma } from '@prisma/client'
+import jwt from 'jsonwebtoken'
+import { FastifyRequest } from 'fastify'
 
 export const createUserAction = async (name: string, email: string, password: string) => {
   try {
@@ -45,4 +47,23 @@ export const deleteUserAction = async (id: string) => {
       id,
     },
   })
+}
+
+export const getUserFromToken = async (req: FastifyRequest) => {
+  const { token }: any = req.params
+
+  try {
+    const { user_id } = jwt.verify(token, String(process.env.TOKEN_ENV)) as {
+      user_id: string
+    }
+
+    const user = await prisma.user.findUnique({ where: { id: user_id } })
+    if (!user) {
+      throw new Error('User not found')
+    }
+
+    return user
+  } catch (error) {
+    throw new Error('Failed to authenticate user')
+  }
 }

@@ -20,5 +20,6 @@ export const List = styled.ul`
 `
 
 export const ListItem = styled.li`
-  margin-right: 10px;
+  margin-right: 20px;
+  padding: 5px;
 `
