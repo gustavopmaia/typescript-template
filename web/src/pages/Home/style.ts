@@ -25,11 +25,3 @@ export const BoxContainer = styled.div`
   gap: 20px;
   padding: 20px;
 `
-
-export const Box = styled.div`
-  background-color: white;
-  color: black;
-  padding: 20px;
-  border-radius: 2px;
-  text-align: center;
-`

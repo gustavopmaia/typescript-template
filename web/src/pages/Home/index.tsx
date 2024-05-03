@@ -1,6 +1,7 @@
 import { Menu } from '../../components/Menu'
 import { Footer } from '../../components/Footer'
-import { Box, BoxContainer, ImgContainer, ImgTitleContainer } from './style'
+import { BoxContainer, ImgContainer, ImgTitleContainer } from './style'
+import { Box } from '../../components/Box'
 
 export const Home = () => {
   return (

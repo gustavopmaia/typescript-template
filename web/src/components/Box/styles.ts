@@ -7,3 +7,9 @@ export const Box = styled.div`
   border-radius: 5px;
   text-align: center;
 `
+
+export const TitleBox = styled.h3`
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+`

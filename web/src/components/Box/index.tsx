@@ -1,4 +1,4 @@
-import { Box as StyledBox } from './styles'
+import { Box as StyledBox, TitleBox } from './styles'
 
 interface BoxProps {
   children: string
@@ -8,7 +8,7 @@ interface BoxProps {
 export const Box = ({ title, children }: BoxProps) => {
   return (
     <StyledBox>
-      <h3>{title}</h3>
+      <TitleBox>{title}</TitleBox>
       <p>{children}</p>
     </StyledBox>
   )
