@@ -1,8 +1,12 @@
 import { ContainerFooter } from './styles'
 
-export const Footer = () => {
+type FooterProps = {
+  fixed?: boolean
+}
+
+export const Footer = ({ fixed }: FooterProps) => {
   return (
-    <ContainerFooter>
+    <ContainerFooter style={{ position: fixed ? 'fixed' : 'static', bottom: fixed ? '0' : 'none' }}>
       <div style={{ color: 'black' }}>
         <p>Feito por Gustavo Maia</p>
       </div>

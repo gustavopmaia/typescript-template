@@ -60,7 +60,7 @@ export const Register = () => {
 
         <h1>{user?.name}</h1>
       </form>
-      <Footer />
+      <Footer fixed />
     </div>
   )
 }

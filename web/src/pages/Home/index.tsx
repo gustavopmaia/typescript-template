@@ -18,7 +18,7 @@ export const Home = () => {
         <Box title='Title 1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Box>
         <Box title='Title 1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Box>
       </BoxContainer>
-      <Footer />
+      <Footer fixed />
     </div>
   )
 }

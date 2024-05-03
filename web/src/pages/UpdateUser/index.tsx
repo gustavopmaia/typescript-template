@@ -99,7 +99,7 @@ export const Update = () => {
           </button>
         )}
       </form>
-      <Footer />
+      <Footer fixed />
     </div>
   )
 }

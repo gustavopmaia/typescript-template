@@ -57,7 +57,7 @@ const Users = () => {
           </UserList>
         </ContainerList>
       </Container>
-      <Footer />
+      <Footer fixed />
     </>
   )
 }

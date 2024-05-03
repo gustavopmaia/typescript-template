@@ -56,7 +56,7 @@ export const Login = () => {
           ENVIAR
         </button>
       </form>
-      <Footer />
+      <Footer fixed />
     </div>
   )
 }
